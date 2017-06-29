@@ -8,13 +8,16 @@
 	<header>
 		<h1 th:text="${continent.name}"></h1>
 	</header>
-	<p th:text="${continent.description}"></p>
+	
 
 
-	<div th:each="country:${continent.countries}">
+	<div class = "list" th:each="country:${continent.countries}">
+	<h2>List of Countries</h2>
 		<a th:href="@{/country(id=${country.id})}" th:text="${country.name}"></a>
 	</div>
-
+	<div class ="home">
+	<a th:href="@{/continents}">Back to home</a>
+	</div>
 	<section></section>
 	<footer>Copyright Summer Saleh 2017</footer>
 </body>

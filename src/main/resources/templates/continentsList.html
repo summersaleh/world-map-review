@@ -15,8 +15,9 @@
 			<a th:href="@{/continent(id=${continent.getId()})}"
 				th:text="${continent.getName()}"></a>
 		</h1>
-		<p th:text="${continent.description}"></p>
 		<img th:src="${continent.getImage()}"/>
+		<p th:text="${continent.description}"></p>
+		
 	</div>
 
 	<section></section>
