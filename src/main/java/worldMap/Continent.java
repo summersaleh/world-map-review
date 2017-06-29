@@ -15,7 +15,7 @@ public class Continent {
 //	Why is this one int and the many ID long?
 	@Id
 	@GeneratedValue
-	private int id;
+	private long id;
 	
 	private String name;
 	private String image;
@@ -25,7 +25,7 @@ public class Continent {
 	@OneToMany(mappedBy = "continent")
 	private Set<Country> countries;
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 

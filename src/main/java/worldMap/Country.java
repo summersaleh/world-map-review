@@ -21,6 +21,15 @@ public class Country {
 	// under it?
 	@ManyToOne
 	private Continent continent;
+	
+
+	public Continent getContinent() {
+		return continent;
+	}
+	
+	
+
+
 
 	public Long getId() {
 		return id;

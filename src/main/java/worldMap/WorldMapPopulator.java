@@ -24,6 +24,7 @@ public class WorldMapPopulator implements CommandLineRunner {
 		
 		Continent northAmerica = new Continent("North America", "images/northamerica.png", "North America is a continent entirely within the Northern Hemisphere and almost all within the Western Hemisphere. It can also be considered a northern subcontinent of the Americas.");
 		continentRepo.save(northAmerica);
+		countryRepo.save(new Country(northAmerica, "USA"));
 
 	}
 

@@ -2,17 +2,19 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <link rel="stylesheet" type="text/css" href="styles.css"></link>
-
-<title>World Map</title>
+<title th:text="${continent.name}"></title>
 </head>
 <body>
 	<header>
-		<h1>WORLD MAP</h1>
+		<h1 th:text="${continent.name}"></h1>
 	</header>
+	<p th:text="${continent.description}"></p>
 
 
-	<div th:each="continents: ${continents}">
+	<div th:each="country:${continent.countries}">
+		<a th:href="@{/country(id=${country.id})}" th:text="${country.name}"></a>
 	</div>
+
 	<section></section>
 	<footer>Copyright Summer Saleh 2017</footer>
 </body>

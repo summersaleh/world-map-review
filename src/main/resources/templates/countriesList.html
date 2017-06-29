@@ -11,8 +11,8 @@
 
 	<div th:each="current: ${countries}">
 		
-			th:href="@{/continent(id=${current.getId()})}"
-			th:text="${current.getName()}" />
+		<a	th:href="@{/countries(id=${current.getId()})}"
+			th:text="${current.getName()}"></a>
 	</div>
 
 	<section></section>

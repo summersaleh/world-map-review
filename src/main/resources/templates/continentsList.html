@@ -10,13 +10,13 @@
 	</header>
 
 
-	<div th:each="continents: ${continents}">
+	<div th:each="continent: ${continents}">
 		<h1>
-			<a th:href="@{/continent(id=${continents.getId()})}"
-				th:text="${continents.getName()}"></a>
+			<a th:href="@{/continent(id=${continent.getId()})}"
+				th:text="${continent.getName()}"></a>
 		</h1>
-		<p th:text="${continents.description}"></p>
-		<img th:src="${continents.getImage()}"/>
+		<p th:text="${continent.description}"></p>
+		<img th:src="${continent.getImage()}"/>
 	</div>
 
 	<section></section>
