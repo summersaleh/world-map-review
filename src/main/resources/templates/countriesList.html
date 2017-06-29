@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css"></link>
+<title>Countries List</title>
+</head>
+<body>
+	<header>
+		<h1>List of Countries</h1>
+	</header>
+
+	<div th:each="current: ${countries}">
+		
+			th:href="@{/continent(id=${current.getId()})}"
+			th:text="${current.getName()}" />
+	</div>
+
+	<section></section>
+	<footer>Copyright Summer Saleh 2017</footer>
+</body>
+</html>

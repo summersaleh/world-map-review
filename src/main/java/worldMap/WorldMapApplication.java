@@ -6,11 +6,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 // Application has the main arg and is where to run the app
 
 @SpringBootApplication
-public class ContinentsApplication {
+public class WorldMapApplication {
 
 	public static void main(String[] args) {
 
-		SpringApplication.run(ContinentsApplication.class, args);
+		SpringApplication.run(WorldMapApplication.class, args);
 		
 	}
 

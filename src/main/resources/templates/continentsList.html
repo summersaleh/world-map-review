@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css"></link>
+<title>World Map</title>
+</head>
+<body>
+	<header>
+		<h1>World Map</h1>
+	</header>
+
+
+	<div th:each="continents: ${continents}">
+		<h1>
+			<a th:href="@{/continent(id=${continents.getId()})}"
+				th:text="${continents.getName()}"></a>
+		</h1>
+		<p th:text="${continents.description}"></p>
+		<img th:src="${continents.getImage()}"/>
+	</div>
+
+	<section></section>
+	<footer>Copyright Summer Saleh 2017</footer>
+</body>
+</html>
