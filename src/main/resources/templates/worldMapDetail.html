@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css"></link>
+
+<title>World Map</title>
+</head>
+<body>
+	<header>
+		<h1>WORLD MAP</h1>
+	</header>
+
+
+	<div th:each="c: ${continents}">
+		<p th:text="${c.name}"></p>
+		<p th:text="${c.description}"></p>
+		<img th:src="${c.imageURL}" />
+	</div>
+	<section></section>
+	<footer>Copyright Summer Saleh 2017</footer>
+</body>
+</html>
