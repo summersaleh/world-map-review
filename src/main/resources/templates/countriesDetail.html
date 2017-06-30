@@ -2,15 +2,23 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <link rel="stylesheet" type="text/css" href="styles.css"></link>
-<title>Countries</title>
+<title th:text="${country.name}"></title>
 </head>
 <body>
 	<header>
 		<h1 th:text="${country.name}"></h1>
-
 	</header>
 
+	<div class="countryContainer">
+		<img class="countryImg" th:src="${country.image}" />
+		<p class="countryDescription" th:text="${country.description}"></p>
+		<p class="countryDescription" th:text="${country.description}"></p>
+		<p class="countryDescription" th:text="${country.description}"></p>
+	</div>
 
+	<div class="home">
+		<a th:href="@{/continent(id=${continent.id})}">Back to Countries List</a>
+	</div>
 	<section></section>
 	<footer>Copyright Summer Saleh 2017</footer>
 </body>

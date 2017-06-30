@@ -3,26 +3,32 @@ body {
 	background-color: #e9ece5;
 	margin: 0;
 	padding: 0;
-	font-family: 'Patrick Hand SC', cursive;
+	font-family: 'Open Sans Condensed', sans-serif;
 }
 
 header {
-	border: solid  #b3c2bf;
-	background-color:  #b3c2bf;
+	border: solid #b3c2bf;
+	background-color: #b3c2bf;
 	color: white;
-	font-family: 'Patrick Hand SC', cursive;
-	
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 1.8rem;
+	box-shadow: 0 0 0 5px rgba(0, 0, 0, .2);
+}
+
+h2 {
+	font-size: 1.5rem;
 }
 
 section {
-	border: solid  #c0dfd9;
-	background-color:  #c0dfd9;
+	border: solid #c0dfd9;
+	background-color: #c0dfd9;
 	padding: 20px;
 	margin-top: 35px;
 }
+
 footer {
-	border: solid  #b3c2bf;
-	background-color:  #b3c2bf;
+	border: solid #b3c2bf;
+	background-color: #b3c2bf;
 	color: white;
 	padding: 25px;
 }
@@ -30,14 +36,88 @@ footer {
 h1 a {
 	text-decoration: none;
 	color: #3b3a36;
-	
 }
 
 a {
 	text-decoration: none;
+	color: black;
 }
 
-img {
-	width: 360px;
+.contImg {
+	border-radius: 50%;
+	width: 260px;
 	height: 240px;
+}
+
+table, td, th {
+	border: 1px solid black;
+	max-width: 400px;
+	margin: auto;
+}
+
+table {
+	box-shadow: 5px 5px 3px rgba(0, 0, 0, .1);
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th {
+	font-size: 35px;
+}
+
+td {
+	font-size: 25px;
+}
+
+th, td {
+	padding: 15px;
+	text-align: left;
+}
+
+.continentDescription {
+	max-width: 400px;
+	margin: auto;
+	font-size: 1.5rem;
+}
+
+.countryContainer {
+	align-text: center;
+	max-width: 800px;
+	margin: auto;
+	margin-top: 70px;
+	
+}
+
+.contName {
+	font-size: 2.5rem;
+}
+
+.globeImg {
+	width: 50px;
+	height: 50px;
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	flex-flow: row-wrap;
+	align-items: space-around;
+	align-content: center;
+}
+
+.continentContainer {
+	margin-top: 20px;
+	box-shadow: 5px 5px 3px rgba(0, 0, 0, .1);
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+
+.continentContainer:hover {
+	box-shadow: 20px 20px 5px rgba(0, 0, 0, .1);
+}
+
+.home {
+	padding-top: 100px;
 }

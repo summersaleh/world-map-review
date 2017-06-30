@@ -10,9 +10,11 @@
 	</header>
 
 	<div th:each="current: ${countries}">
-		
-		<a	th:href="@{/countries(id=${current.getId()})}"
-			th:text="${current.getName()}"></a>
+
+		<a th:href="@{/countries(id=${current.getId()})}"
+			th:text="${current.getName()}"></a> 
+			<img class="countryImg" th:src="${current.getImage()}" />
+		<p class="countryDescription" th:text="${current.description}"></p>
 	</div>
 
 	<section></section>

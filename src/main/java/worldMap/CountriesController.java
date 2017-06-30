@@ -45,26 +45,26 @@ public class CountriesController {
 		return "countriesDetail";
 	}
 	
-	@RequestMapping("/addCountry")
-	public String addCountry(@RequestParam("countryId") long id, @RequestParam("name") String newCountryName) {
-		
-		Continent selected = continentRepo.findOne(id);
-		Country newCountry = new Country(selected, newCountryName);
-		countryRepo.save(newCountry);
-		
-	return "redirect:/continent?id=" + id;
-	}
-	
-	@RequestMapping("/country/delete")
-	public String deleteCountry(@RequestParam("countryId") long countryId) {
-		
-		Country toDelete = countryRepo.findOne(countryId);
-		long continentId = toDelete.getContinent().getId();
-		
-		countryRepo.delete(toDelete);
-		
-		return "redirect:/continent?id=" + continentId;
-	}
+//	@RequestMapping("/addCountry")
+//	public String addCountry(@RequestParam("countryId") long id, @RequestParam("name") String newCountryName) {
+//		
+//		Continent selected = continentRepo.findOne(id);
+//		Country newCountry = new Country(selected, newCountryName);
+//		countryRepo.save(newCountry);
+//		
+//	return "redirect:/continent?id=" + id;
+//	}
+//	
+//	@RequestMapping("/country/delete")
+//	public String deleteCountry(@RequestParam("countryId") long countryId) {
+//		
+//		Country toDelete = countryRepo.findOne(countryId);
+//		long continentId = toDelete.getContinent().getId();
+//		
+//		countryRepo.delete(toDelete);
+//		
+//		return "redirect:/continent?id=" + continentId;
+//	}
 	
 	
 	

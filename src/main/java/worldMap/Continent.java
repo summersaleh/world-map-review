@@ -1,14 +1,13 @@
 package worldMap;
 
 import java.util.Set;
+import java.util.SortedSet;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-
-import org.springframework.ui.Model;
+import javax.persistence.OrderBy;
 //Name name an entity a plural name
 @Entity
 public class Continent {
@@ -23,6 +22,7 @@ public class Continent {
 
 	// One continent to many countries
 	@OneToMany(mappedBy = "continent")
+	@OrderBy("name")
 	private Set<Country> countries;
 
 	public long getId() {
