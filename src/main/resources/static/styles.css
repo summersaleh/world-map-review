@@ -74,6 +74,11 @@ th, td {
 	text-align: left;
 }
 
+.countryImg {
+	width: 360px;
+	height: 240px;
+}
+
 .continentDescription {
 	max-width: 400px;
 	margin: auto;
