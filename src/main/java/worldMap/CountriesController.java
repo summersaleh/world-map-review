@@ -13,12 +13,10 @@ public class CountriesController {
 
 	@Resource
 	private ContinentRepository continentRepo;
-	
+
 	@Resource
 	private CountryRepository countryRepo;
-	
-	
-	
+
 	@RequestMapping("/continents")
 	public String fetchContinents(Model model) {
 		model.addAttribute("continents", continentRepo.findAll());
@@ -30,7 +28,7 @@ public class CountriesController {
 		model.addAttribute(continentRepo.findOne(id));
 		return "continentsDetail";
 	}
-	
+
 	@RequestMapping("/countries")
 	public String fetchCountries(Model model) {
 		model.addAttribute("countries", countryRepo.findAll());
@@ -41,32 +39,37 @@ public class CountriesController {
 	public String fetchCountriesDetail(@RequestParam("id") long id, Model model) {
 		Country selectedCountry = countryRepo.findOne(id);
 		model.addAttribute(selectedCountry);
-//		same as model.addAttribute("Country", selectedCountry);
+		// same as model.addAttribute("Country", selectedCountry);
 		return "countriesDetail";
 	}
-	
-//	@RequestMapping("/addCountry")
-//	public String addCountry(@RequestParam("countryId") long id, @RequestParam("name") String newCountryName) {
-//		
-//		Continent selected = continentRepo.findOne(id);
-//		Country newCountry = new Country(selected, newCountryName);
-//		countryRepo.save(newCountry);
-//		
-//	return "redirect:/continent?id=" + id;
+
+//	@RequestMapping("/tags")
+//	public String fetchtags(@RequestParam("id") long id, Model model) {
+//		model.addAttribute("tags", countryRepo.findOne(id));
+//		model.addAttribute("countries", countryRepo.findOne(id));
+//		return "reviewTags";
 //	}
-//	
-//	@RequestMapping("/country/delete")
-//	public String deleteCountry(@RequestParam("countryId") long countryId) {
-//		
-//		Country toDelete = countryRepo.findOne(countryId);
-//		long continentId = toDelete.getContinent().getId();
-//		
-//		countryRepo.delete(toDelete);
-//		
-//		return "redirect:/continent?id=" + continentId;
-//	}
-	
-	
-	
-	
+
+	// @RequestMapping("/addCountry")
+	// public String addCountry(@RequestParam("countryId") long id,
+	// @RequestParam("name") String newCountryName) {
+	//
+	// Continent selected = continentRepo.findOne(id);
+	// Country newCountry = new Country(selected, newCountryName);
+	// countryRepo.save(newCountry);
+	//
+	// return "redirect:/continent?id=" + id;
+	// }
+	//
+	// @RequestMapping("/country/delete")
+	// public String deleteCountry(@RequestParam("countryId") long countryId) {
+	//
+	// Country toDelete = countryRepo.findOne(countryId);
+	// long continentId = toDelete.getContinent().getId();
+	//
+	// countryRepo.delete(toDelete);
+	//
+	// return "redirect:/continent?id=" + continentId;
+	// }
+
 }
