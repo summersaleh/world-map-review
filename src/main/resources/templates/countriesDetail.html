@@ -14,12 +14,39 @@
 		<p class="countryDescription" th:text="${country.description}"></p>
 		<p class="countryDescription" th:text="${country.description}"></p>
 		<p class="countryDescription" th:text="${country.description}"></p>
-		<a th:href="@{/continent(id=${continent.id})}">Back to Countries List</a>
+	</div>
+
+	<div class="tagDelete">
+		<form>
+			<input type="hidden" name="countryId" th:value="${country.id}" />
+			<ul>
+			<li th:each="tag: ${country.tags}"><a
+				th:href="@{/tags(id=${tag.id})}" th:text="${tag.name}" /><button name="tagId" th:value="${tag.id}"
+					th:formaction="@{/tags/delete}">DELETE
+					</button></li>
+					</ul>
+		</form>
 	</div>
 
 
-		
+	<div class="tagAdd">
+		<form method="POST">
+			<input type="hidden" name="id" th:value="${country.id}" /> <label>Tag:
+				<input type="text" name="name" />
+			</label>
+			<button th:formaction="@{/tags/add}">ADD TAG</button>
+		</form>
 	</div>
+
+
+
+
+<div class="home">
+	<a th:href="@{/continent(id=${country.continent.id})}">Back to
+		Countries List</a>
+</div>
+
+
 	<section></section>
 	<footer>Copyright Summer Saleh 2017</footer>
 </body>

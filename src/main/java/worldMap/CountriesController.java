@@ -43,12 +43,7 @@ public class CountriesController {
 		return "countriesDetail";
 	}
 
-//	@RequestMapping("/tags")
-//	public String fetchtags(@RequestParam("id") long id, Model model) {
-//		model.addAttribute("tags", countryRepo.findOne(id));
-//		model.addAttribute("countries", countryRepo.findOne(id));
-//		return "reviewTags";
-//	}
+
 
 	// @RequestMapping("/addCountry")
 	// public String addCountry(@RequestParam("countryId") long id,
@@ -59,17 +54,6 @@ public class CountriesController {
 	// countryRepo.save(newCountry);
 	//
 	// return "redirect:/continent?id=" + id;
-	// }
-	//
-	// @RequestMapping("/country/delete")
-	// public String deleteCountry(@RequestParam("countryId") long countryId) {
-	//
-	// Country toDelete = countryRepo.findOne(countryId);
-	// long continentId = toDelete.getContinent().getId();
-	//
-	// countryRepo.delete(toDelete);
-	//
-	// return "redirect:/continent?id=" + continentId;
 	// }
 
 }

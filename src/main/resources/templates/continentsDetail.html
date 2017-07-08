@@ -11,14 +11,13 @@
 
 
 	<h2>List of Countries</h2>
-	<form method="POST">
+	
 	<table>
 		<thead>
 		<tr>
 			<th>Name</th>
 			<th>Population</th>
 			<th>Language</th>
-			<th>Delete</th>
 			</tr>
 			</thead>
 			<tbody>
@@ -26,11 +25,11 @@
 			<td> <a th:href="@{/country(id=${country.id})}" th:text="${country.name}"></a></td>
 			<td th:text="${country.population}"></td>
 			<td th:text="${country.language}"></td>
-			<td><button th:formaction="@{/deleteReview}" name="id" th:value="${country.id}">delete me</button></td>
 			</tr>
 			</tbody>
 	</table>
-	</form>
+	
+	
 	<div class="home">
 		<a th:href="@{/continents}">Back to home</a>
 	</div>

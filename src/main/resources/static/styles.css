@@ -24,6 +24,10 @@ section {
 	background-color: #c0dfd9;
 	padding: 20px;
 	margin-top: 35px;
+	position: absolute;
+	right: 0;
+	bottom: 74px;
+	left: 0;
 }
 
 footer {
@@ -31,6 +35,10 @@ footer {
 	background-color: #b3c2bf;
 	color: white;
 	padding: 25px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 h1 a {
@@ -49,8 +57,7 @@ a {
 	height: 240px;
 }
 
-table, td, th {
-	border: 1px solid black;
+table, th, td {
 	max-width: 400px;
 	margin: auto;
 }
@@ -63,6 +70,7 @@ table {
 
 th {
 	font-size: 35px;
+	background-color: #b3c2bf;
 }
 
 td {
@@ -72,6 +80,18 @@ td {
 th, td {
 	padding: 15px;
 	text-align: left;
+}
+
+tr:hover {
+	box-shadow: 10px 20px 20px 20px rgba(0, 0, 0, .1);
+}
+
+tr:nth-child(even) {
+	background-color: #b3c2bf;
+}
+
+tr:nth-child(odd) {
+	background-color: #d2e8e4;
 }
 
 .countryImg {
@@ -90,7 +110,6 @@ th, td {
 	max-width: 800px;
 	margin: auto;
 	margin-top: 70px;
-	
 }
 
 .contName {
@@ -121,6 +140,10 @@ th, td {
 
 .continentContainer:hover {
 	box-shadow: 20px 20px 5px rgba(0, 0, 0, .1);
+}
+
+.tagDelete {
+	display: flex;
 }
 
 .home {
