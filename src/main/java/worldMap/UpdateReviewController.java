@@ -52,11 +52,11 @@ public class UpdateReviewController {
 	}
 	
 	
-//	@RequestMapping("/createTags")
-//	public String createReview(@RequestParam long id, @RequestParam String content) {
+//	@RequestMapping("/tags/cloud")
+//	public String createCloud() {
 //		Tag selected = tagRepo.findOne(id);
 //		tagRepo.save(selected);
-//		return "redirect:/country?id=" + id;
+//		return "foodCloud";
 //	}
 
 }
